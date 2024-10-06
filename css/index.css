@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Courier Prime';
+    background-color: #ffbb00;
+    cursor: pointer; /* Change cursor for the entire webpage */
+}
+
+#a1 {
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    padding: 20px 40px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 100px;
+    letter-spacing: 5px;
+    background-color: #ffffff;
+    border: 8px solid #dddddd;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+    overflow: hidden;
+}
+
+#a1:hover {
+    background-color: #cccccc;
+    transform: translateY(-2px);
+    color: #ffffff; /* Change font color on hover */
+}
+
+b {
+    font-weight: 700 !important;
+}

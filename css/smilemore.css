@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier Prime';
+}
+
+h1 {
+    margin: 20px 0; /* Add space above and below the h1 */
+    color: #000000;
+    font-family: 'Courier Prime';
+    font-size: 50px;
+    position: relative; /* Enable positioning for the animated circle */
+}
+
+.highlight {
+    position: relative;
+    display: inline-block; /* Necessary for the circle effect */
+}
+
+.highlight::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 125%; /* Size of the circle */
+    height: 80%; /* Size of the circle */
+    border: 5px solid #ffbb00; /* Circle border color */
+    border-radius: 50%; /* Make it a circle */
+    background-color: #ffbb00; /* Solid yellow fill */
+    transform: translate(-50%, -50%); /* Center the circle */
+    animation: pulse 1s infinite; /* Slower pulse */
+    z-index: -1; /* Send the circle behind the text */
+}
+
+@keyframes pulse {
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        background-color: #ffbb00; /* Start color */
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        background-color: #ffbb00; /* Keep color the same */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        background-color: #ffbb00; /* Back to start color */
+    }
+}
+
+#p1 {
+    margin: 5px auto;
+    color: #8b8b8b;
+    font-family: 'Courier Prime';
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: left;
+    border: 5px solid #dddddd;
+    padding: 45px;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+    width: 80%;
+    max-width: 800px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100px;
+    position: relative;
+    line-height: 1;
+}
+
+#d1 {
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    padding: 20px 40px;
+    color: #000000;
+    font-size: 15px;
+}
+
+.typing-animation {
+    display: inline-block;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    width: 100%;
+}
